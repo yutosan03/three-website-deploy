@@ -1,17 +1,18 @@
 import "./style.css";
 import * as THREE from "three";
+import bg from "./bg/bg.jpg"
 
 console.log(THREE)
 
 //canvas
 const canvas = document.querySelector("#webgl");
- 
+
 //シーン
 const scene = new THREE.Scene();
 
 //背景用のテクスチャ
 const textureLoader = new THREE.TextureLoader()
-const bgTexture = textureLoader.load("bg/bg.jpg")
+const bgTexture = textureLoader.load(bg)
 scene.background = bgTexture
 
 //サイズ
